@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Section from "./components/Section";
+import ChartDonut from "./components/ChartDonut";
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
             provident magni corporis sed sit blanditiis earum ad praesentium
             voluptatibus magnam minus cumque eum.
           </h1>
+        </Section>
+        <Section>
+          <ChartDonut />
         </Section>
       </div>
     </>
