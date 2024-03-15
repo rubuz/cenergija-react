@@ -1,7 +1,6 @@
 import Header from "./components/Header";
 import Section from "./components/Section";
 import ChartDonut from "./components/ChartDonut";
-import LiveTime from "./components/LiveTime";
 
 function App() {
   return (
@@ -20,7 +19,6 @@ function App() {
         </Section>
         <Section>
           <ChartDonut />
-          <LiveTime />
         </Section>
       </div>
     </>

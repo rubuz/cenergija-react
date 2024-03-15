@@ -8,6 +8,7 @@ import {
   workFreeHolidays,
 } from "../data/data";
 import useCurrentTimePeriod from "../hooks/useCurrentTimePeriod";
+import Clock from "./Clock";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -44,8 +45,11 @@ const ChartDonut = () => {
 
   return (
     <div>
-      <div className="w-1/2">
+      <div className="relative flex w-1/2">
         <Doughnut data={chartData} />
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[49.2%]">
+          <Clock />
+        </div>
       </div>
     </div>
   );
