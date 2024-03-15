@@ -21,10 +21,8 @@ const Clock = () => {
   const rotateHour = `rotate(${hourDeg}deg)`;
   const rotateMinute = `rotate(${minuteDeg}deg)`;
 
-  console.log(rotateHour, rotateMinute);
-
   return (
-    <div className="my-10 w-full">
+    <div className="-z-20 my-10 w-full">
       <div className="relative flex aspect-square h-[600px] items-center justify-center rounded-full bg-transparent">
         <div className="indicator">
           <span style={{ transform: rotateHour }} className="hand hour"></span>

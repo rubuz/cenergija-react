@@ -8,7 +8,8 @@ import {
   workFreeHolidays,
 } from "../data/data";
 import useCurrentTimePeriod from "../hooks/useCurrentTimePeriod";
-import Clock from "./Clock";
+// import Clock from "./Clock";
+import ClockDot from "./ClockDot";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -31,7 +32,7 @@ const ChartDonut = () => {
   const dayType = isWorkDay ? "workDay" : "freeDay";
   const timeOfDay = isAM ? "AM" : "PM";
 
-  console.log(season[dayType][timeOfDay]);
+  const color: string[] = season[dayType][timeOfDay].colors;
 
   const chartData = {
     datasets: [
@@ -44,14 +45,21 @@ const ChartDonut = () => {
   };
 
   return (
-    <div>
-      <div className="relative flex w-1/2">
-        <Doughnut data={chartData} />
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[49.2%]">
+    <>
+      <div className="relative mx-auto flex w-1/2 items-center justify-center">
+        <div className="z-20 m-0 aspect-square w-[92%]">
+          <Doughnut data={chartData} />
+        </div>
+
+        {/* <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[49.2%]">
           <Clock />
+        </div> */}
+        <div className="absolute -top-[1.4rem] w-full">
+          <ClockDot dotColor={color} /> // Fix: Pass the first element of the
+          color array
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
