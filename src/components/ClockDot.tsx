@@ -19,12 +19,13 @@ const ClockDot = ({ dotColor }: { dotColor: string }) => {
 
   return (
     <div
-      style={{ transform: rotateHour }}
+      // style={{ transform: rotateHour }}
+      style={{ transform: `${rotateHour}` }}
       className="relative aspect-square rounded-full"
     >
       <div
         style={{ backgroundColor: dotColor }}
-        className="absolute left-1/2 top-0 aspect-square h-[25px] origin-center -translate-x-1/2  transform rounded-full"
+        className="absolute left-1/2 top-0 aspect-square h-[25px] origin-center -translate-x-1/2 rounded-full"
       ></div>
     </div>
   );

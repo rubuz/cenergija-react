@@ -6,6 +6,8 @@ import {
   highSeasonMonths,
   workFreeDays,
   workFreeHolidays,
+  hourAMIndexMapping,
+  hourPMIndexMapping,
 } from "../data/data";
 import useCurrentTimePeriod from "../hooks/useCurrentTimePeriod";
 // import Clock from "./Clock";
@@ -32,33 +34,56 @@ const ChartDonut = () => {
   const dayType = isWorkDay ? "workDay" : "freeDay";
   const timeOfDay = isAM ? "AM" : "PM";
 
-  const color: string[] = season[dayType][timeOfDay].colors;
+  const colors: string[] = season[dayType][timeOfDay].colors;
+  const currentHour = new Date().getHours();
+  const hourIn12Format = currentHour > 12 ? currentHour - 12 : currentHour;
+  const colorIndex = isAM
+    ? hourAMIndexMapping[hourIn12Format]
+    : hourPMIndexMapping[hourIn12Format];
+  const dotColor = colors[colorIndex];
 
   const chartData = {
     datasets: [
       {
         data: season[dayType][timeOfDay].time,
         backgroundColor: season[dayType][timeOfDay].colors,
-        cutout: "85%",
+        borderWidth: 0,
+        cutout: "82%",
+        hoverBorderWidth: 0,
+        hoverOffset: 0,
+        hoverBackgroundColor: season[dayType][timeOfDay].colors,
       },
     ],
   };
 
+  const chartOptions = {
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: { enabled: false },
+    },
+  };
+
   return (
     <>
-      <div className="relative mx-auto flex w-1/2 items-center justify-center">
-        <div className="z-20 m-0 aspect-square w-[92%]">
-          <Doughnut data={chartData} />
+      <div className="relative mx-auto flex aspect-square h-[700px] items-center justify-center">
+        <div className="z-20 m-0 aspect-square w-[91%]">
+          <Doughnut data={chartData} options={chartOptions} />
         </div>
 
         {/* <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[49.2%]">
           <Clock />
         </div> */}
-        <div className="absolute -top-[1.4rem] w-full">
-          <ClockDot dotColor={color} /> // Fix: Pass the first element of the
-          color array
+        <div className="absolute top-0 w-full">
+          <ClockDot dotColor={dotColor} />
         </div>
       </div>
+      {/* <div className="relative mx-auto flex w-1/2 items-center justify-center">
+        <div>
+          <CustomPie />
+        </div>
+      </div> */}
     </>
   );
 };

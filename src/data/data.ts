@@ -33,6 +33,15 @@ export const workFreeHolidays: string[] = [
   "2024-12-26",
 ];
 
+// DOT COLORS INDEX
+
+export const hourPMIndexMapping: number[] = [
+  0, 0, 1, 1, 2, 2, 2, 2, 3, 3, 4, 4,
+];
+export const hourAMIndexMapping: number[] = [
+  0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2,
+];
+
 // DATA FOR THE DOUGHNUT GRAPH
 
 const blok1: string = "rgba(255, 0, 0, 1)";
