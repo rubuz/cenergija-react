@@ -12,6 +12,7 @@ import {
 import useCurrentTimePeriod from "../hooks/useCurrentTimePeriod";
 // import Clock from "./Clock";
 import ClockDot from "./ClockDot";
+import ClockNumbers from "./ClockNumbers";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -36,7 +37,7 @@ const ChartDonut = () => {
 
   const colors: string[] = season[dayType][timeOfDay].colors;
   const currentHour = new Date().getHours();
-  const hourIn12Format = currentHour > 12 ? currentHour - 12 : currentHour;
+  const hourIn12Format = currentHour > 11 ? currentHour - 12 : currentHour;
   const colorIndex = isAM
     ? hourAMIndexMapping[hourIn12Format]
     : hourPMIndexMapping[hourIn12Format];
@@ -75,8 +76,11 @@ const ChartDonut = () => {
         {/* <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[49.2%]">
           <Clock />
         </div> */}
-        <div className="absolute top-0 w-full">
+        <div className="absolute top-0 z-10 w-full">
           <ClockDot dotColor={dotColor} />
+        </div>
+        <div className="absolute top-0 w-full">
+          <ClockNumbers isAM={isAM} />
         </div>
       </div>
       {/* <div className="relative mx-auto flex w-1/2 items-center justify-center">
