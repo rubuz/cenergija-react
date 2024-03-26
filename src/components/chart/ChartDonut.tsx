@@ -8,11 +8,13 @@ import {
   workFreeHolidays,
   hourAMIndexMapping,
   hourPMIndexMapping,
-} from "../data/data";
-import useCurrentTimePeriod from "../hooks/useCurrentTimePeriod";
-// import Clock from "./Clock";
+} from "../../data/data";
+import useCurrentTimePeriod from "../../hooks/useCurrentTimePeriod";
 import ClockDot from "./ClockDot";
 import ClockNumbers from "./ClockNumbers";
+import ChartCenter from "./ChartCenter";
+
+import { PriceBlock } from "../../data/data";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -43,6 +45,10 @@ const ChartDonut = () => {
     : hourPMIndexMapping[hourIn12Format];
   const dotColor = colors[colorIndex];
 
+  const currentPrice: PriceBlock =
+    season[dayType][timeOfDay].prices[colorIndex];
+
+  // CHART DATA and OPTIONS
   const chartData = {
     datasets: [
       {
@@ -72,22 +78,20 @@ const ChartDonut = () => {
         <div className="z-20 m-0 aspect-square w-[91%]">
           <Doughnut data={chartData} options={chartOptions} />
         </div>
-
-        {/* <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[49.2%]">
-          <Clock />
-        </div> */}
         <div className="absolute top-0 z-10 w-full">
           <ClockDot dotColor={dotColor} />
         </div>
         <div className="absolute top-0 w-full">
           <ClockNumbers isAM={isAM} />
         </div>
-      </div>
-      {/* <div className="relative mx-auto flex w-1/2 items-center justify-center">
-        <div>
-          <CustomPie />
+        <div className="absolute top-0 w-full">
+          <ChartCenter
+            currentPrice={currentPrice}
+            month={month}
+            day={dayOfMonth}
+          />
         </div>
-      </div> */}
+      </div>
     </>
   );
 };

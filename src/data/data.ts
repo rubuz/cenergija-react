@@ -1,19 +1,48 @@
 type DataType = number[];
 
-interface TimeBlock {
+type TimeBlock = {
   colors: string[];
   time: DataType;
-}
+  prices: PriceBlock[];
+};
 
-interface DayType {
+type DayType = {
   AM: TimeBlock;
   PM: TimeBlock;
-}
+};
 
-interface SeasonType {
+type SeasonType = {
   workDay: DayType;
   freeDay: DayType;
-}
+};
+
+type PriceBlock = {
+  prikljucnaMoc: number;
+  porabljenaEnergija: number;
+};
+
+// PRICE DATA
+
+const priceBlok1: PriceBlock = {
+  prikljucnaMoc: 3.61324,
+  porabljenaEnergija: 0.01958,
+};
+const priceBlok2: PriceBlock = {
+  prikljucnaMoc: 0.8824,
+  porabljenaEnergija: 0.01844,
+};
+const priceBlok3: PriceBlock = {
+  prikljucnaMoc: 0.19137,
+  porabljenaEnergija: 0.01837,
+};
+const priceBlok4: PriceBlock = {
+  prikljucnaMoc: 0.01316,
+  porabljenaEnergija: 0.01838,
+};
+const priceBlok5: PriceBlock = {
+  prikljucnaMoc: 0,
+  porabljenaEnergija: 0.01847,
+};
 
 // TIME DATA
 
@@ -56,22 +85,56 @@ export const dataPM: DataType = [2, 2, 4, 2, 2];
 
 export const highSeason: SeasonType = {
   workDay: {
-    AM: { colors: [blok3, blok2, blok1], time: dataAM },
-    PM: { colors: [blok1, blok2, blok1, blok2, blok3], time: dataPM },
+    AM: {
+      colors: [blok3, blok2, blok1],
+      time: dataAM,
+      prices: [priceBlok3, priceBlok2, priceBlok1],
+    },
+    PM: {
+      colors: [blok1, blok2, blok1, blok2, blok3],
+      time: dataPM,
+      prices: [priceBlok1, priceBlok2, priceBlok1, priceBlok2, priceBlok3],
+    },
   },
   freeDay: {
-    AM: { colors: [blok4, blok3, blok2], time: dataAM },
-    PM: { colors: [blok2, blok3, blok2, blok3, blok4], time: dataPM },
+    AM: {
+      colors: [blok4, blok3, blok2],
+      time: dataAM,
+      prices: [priceBlok4, priceBlok3, priceBlok2],
+    },
+    PM: {
+      colors: [blok2, blok3, blok2, blok3, blok4],
+      time: dataPM,
+      prices: [priceBlok2, priceBlok3, priceBlok2, priceBlok3, priceBlok4],
+    },
   },
 };
 
 export const lowSeason: SeasonType = {
   workDay: {
-    AM: { colors: [blok4, blok3, blok2], time: dataAM },
-    PM: { colors: [blok2, blok3, blok2, blok3, blok4], time: dataPM },
+    AM: {
+      colors: [blok4, blok3, blok2],
+      time: dataAM,
+      prices: [priceBlok4, priceBlok3, priceBlok2],
+    },
+    PM: {
+      colors: [blok2, blok3, blok2, blok3, blok4],
+      time: dataPM,
+      prices: [priceBlok2, priceBlok3, priceBlok2, priceBlok3, priceBlok4],
+    },
   },
   freeDay: {
-    AM: { colors: [blok5, blok4, blok3], time: dataAM },
-    PM: { colors: [blok3, blok4, blok3, blok4, blok5], time: dataPM },
+    AM: {
+      colors: [blok5, blok4, blok3],
+      time: dataAM,
+      prices: [priceBlok5, priceBlok4, priceBlok3],
+    },
+    PM: {
+      colors: [blok3, blok4, blok3, blok4, blok5],
+      time: dataPM,
+      prices: [priceBlok3, priceBlok4, priceBlok3, priceBlok4, priceBlok5],
+    },
   },
 };
+
+export type { DataType, TimeBlock, DayType, SeasonType, PriceBlock };

@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import Section from "./components/Section";
-import ChartDonut from "./components/ChartDonut";
+import ChartDonut from "./components/chart/ChartDonut";
 
 function App() {
   return (
