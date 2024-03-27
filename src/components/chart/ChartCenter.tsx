@@ -1,22 +1,27 @@
 import { useEffect, useState } from "react";
 import { PriceBlock } from "../../data/data";
 
-const ChartCenter = ({
-  currentPrice,
-  month,
-  day,
-}: {
-  currentPrice: PriceBlock;
-  month: number;
-  day: number;
-}) => {
+// Custom hook for getting current time
+const useCurrentTime = () => {
   const [currentTime, setCurrentTime] = useState(
-    new Date().toLocaleTimeString(),
+    new Date().toLocaleTimeString([], {
+      hour12: false,
+      hour: "numeric",
+      minute: "2-digit",
+      second: "2-digit",
+    }),
   );
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentTime(new Date().toLocaleTimeString());
+      setCurrentTime(
+        new Date().toLocaleTimeString([], {
+          hour12: false,
+          hour: "numeric",
+          minute: "2-digit",
+          second: "2-digit",
+        }),
+      );
     }, 1000);
 
     return () => {
@@ -24,13 +29,57 @@ const ChartCenter = ({
     };
   }, []);
 
+  return currentTime;
+};
+
+const ChartCenter = ({
+  currentPrice,
+  day,
+  isWorkDay,
+  textColor,
+}: {
+  currentPrice: PriceBlock;
+  day: number;
+  isWorkDay: boolean;
+  textColor: string;
+}) => {
+  const currentTime = useCurrentTime();
+  const month = new Date().toLocaleString("sl-SI", { month: "long" });
+  const dayOfWeek = new Date().toLocaleString("sl-SI", { weekday: "short" });
+
   return (
-    <div className="flex aspect-square h-full flex-col items-center justify-center">
-      <p>{currentTime}</p>
-      <p>{month + 1}</p>
-      <p>{day}</p>
-      <p>{currentPrice.prikljucnaMoc}</p>
-      <p>{currentPrice.porabljenaEnergija}</p>
+    <div className="flex aspect-square h-full items-center justify-center">
+      <p className="absolute top-[25%] text-3xl font-semibold text-slate-700">
+        {currentTime}
+      </p>
+      <div className="flex flex-col gap-4">
+        <div className="text-center">
+          <p className="mx-auto w-[70%] font-semibold text-slate-500">
+            Omrežnina za priključno moč v €/kW
+          </p>
+          <p style={{ color: textColor }} className="text-4xl font-bold">
+            {currentPrice.prikljucnaMoc}{" "}
+          </p>
+        </div>
+        <div className="text-center">
+          <p className="mx-auto w-[70%] font-semibold text-slate-500">
+            Omrežnina za porabljeno energijo v €/kWh
+          </p>
+          <p style={{ color: textColor }} className="text-4xl font-bold">
+            {currentPrice.porabljenaEnergija}
+          </p>
+        </div>
+      </div>
+
+      <div className="absolute right-[22%] flex flex-col items-center divide-y-2 divide-slate-400 ">
+        <p className="w-full text-center capitalize">{month}</p>
+        <p
+          className={`w-full text-center text-2xl font-bold ${isWorkDay ? "" : "text-red-600"}`}
+        >
+          {day}
+        </p>
+        <p className="w-full text-center capitalize">{dayOfWeek}</p>
+      </div>
     </div>
   );
 };

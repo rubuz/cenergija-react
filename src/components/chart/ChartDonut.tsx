@@ -78,7 +78,7 @@ const ChartDonut = () => {
         <div className="z-20 m-0 aspect-square w-[91%]">
           <Doughnut data={chartData} options={chartOptions} />
         </div>
-        <div className="absolute top-0 z-10 w-full">
+        <div className="absolute left-1/2 top-1/2 z-40 w-[69%] -translate-x-1/2 -translate-y-1/2">
           <ClockDot dotColor={dotColor} />
         </div>
         <div className="absolute top-0 w-full">
@@ -87,8 +87,9 @@ const ChartDonut = () => {
         <div className="absolute top-0 w-full">
           <ChartCenter
             currentPrice={currentPrice}
-            month={month}
             day={dayOfMonth}
+            isWorkDay={isWorkDay}
+            textColor={dotColor}
           />
         </div>
       </div>
