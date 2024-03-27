@@ -17,7 +17,7 @@ const useCurrentTimePeriod = () => {
         dayOfMonth: now.getDate(),
         isAM: now.getHours() < 12,
       });
-    }, 1000 * 60); // Update every minute
+    }, 1000 * 10); // Update every minute
 
     return () => {
       clearInterval(timer);

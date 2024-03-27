@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Section from "./components/Section";
+import Tables from "./components/Tables";
 import ChartDonut from "./components/chart/ChartDonut";
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
         </Section>
         <Section>
           <ChartDonut />
+        </Section>
+        <Section>
+          <Tables />
         </Section>
       </div>
     </>

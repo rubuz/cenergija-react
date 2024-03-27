@@ -6,4 +6,23 @@
   .test {
     @apply text-accent mb-4 font-semibold;
   }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .grid_top_row {
+    @apply flex-center h-full w-full self-center text-center text-lg font-semibold capitalize;
+  }
+  .grid_inner_item {
+    @apply flex-center h-full w-full flex-col self-center;
+  }
+
+  .grid_h_item {
+    @apply flex-center bg-table-grey-dark h-full w-full text-center;
+  }
+
+  .grid_empty_item {
+    @apply flex-center h-full w-full bg-slate-100;
+  }
 }
