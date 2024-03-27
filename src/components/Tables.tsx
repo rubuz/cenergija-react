@@ -1,4 +1,5 @@
 import TableBlok from "./tables/TableBlok";
+import TablePrice from "./tables/TablePrice";
 
 const Tables = () => {
   return (
@@ -8,7 +9,7 @@ const Tables = () => {
       </h2>
       <div>
         <TableBlok />
-        <div>Tabela cene</div>
+        <TablePrice />
       </div>
     </div>
   );

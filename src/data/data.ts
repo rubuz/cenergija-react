@@ -23,23 +23,23 @@ type PriceBlock = {
 
 // PRICE DATA
 
-const priceBlok1: PriceBlock = {
+export const priceBlok1: PriceBlock = {
   prikljucnaMoc: 3.61324,
   porabljenaEnergija: 0.01958,
 };
-const priceBlok2: PriceBlock = {
+export const priceBlok2: PriceBlock = {
   prikljucnaMoc: 0.8824,
   porabljenaEnergija: 0.01844,
 };
-const priceBlok3: PriceBlock = {
+export const priceBlok3: PriceBlock = {
   prikljucnaMoc: 0.19137,
   porabljenaEnergija: 0.01837,
 };
-const priceBlok4: PriceBlock = {
+export const priceBlok4: PriceBlock = {
   prikljucnaMoc: 0.01316,
   porabljenaEnergija: 0.01838,
 };
-const priceBlok5: PriceBlock = {
+export const priceBlok5: PriceBlock = {
   prikljucnaMoc: 0,
   porabljenaEnergija: 0.01847,
 };
