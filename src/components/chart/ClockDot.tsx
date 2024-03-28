@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 
 const ClockDot = ({ dotColor }: { dotColor: string }) => {
-  const [hourDeg, setHourDeg] = useState(0);
+  const now = new Date();
+  const secondsRatio = now.getSeconds() / 60;
+  const minutesRatio = (secondsRatio + now.getMinutes()) / 60;
+  const hoursRatio = (minutesRatio + now.getHours()) / 12;
+  const initialRotation = Math.round(hoursRatio * 360);
+
+  const [hourDeg, setHourDeg] = useState(initialRotation);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -13,13 +19,12 @@ const ClockDot = ({ dotColor }: { dotColor: string }) => {
     }, 1000);
 
     return () => clearInterval(intervalId);
-  }, [hourDeg]);
+  }, []);
 
   const rotateHour = `rotate(${hourDeg}deg)`;
 
   return (
     <div
-      // style={{ transform: rotateHour }}
       style={{ transform: `${rotateHour}` }}
       className="relative aspect-square rounded-full"
     >
