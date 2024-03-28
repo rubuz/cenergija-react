@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Section from "./components/Section";
 import Tables from "./components/Tables";
@@ -19,6 +20,7 @@ function App() {
         <Section>
           <Tables />
         </Section>
+        <Footer />
       </div>
     </>
   );
