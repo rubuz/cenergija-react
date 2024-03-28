@@ -10,7 +10,7 @@ function App() {
         <Header />
         <Section>
           <h1 className="my-14 text-center text-5xl font-bold">
-            CENA ELEKTRIČNE ENERGIJE
+            TRENUNTA CENA ELEKTRIČNE OMREŽNINE
           </h1>
         </Section>
         <Section>
