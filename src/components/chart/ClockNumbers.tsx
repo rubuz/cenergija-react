@@ -1,7 +1,7 @@
 const ClockNumbers = ({ isAM }: { isAM: boolean }) => {
   let numbers: number[] = [];
   if (isAM) {
-    numbers = [6, 7, 12];
+    numbers = [6, 7, 0];
   } else {
     numbers = [14, 16, 20, 22, 12];
   }

@@ -8,25 +8,51 @@ import {
 
 const TablePrice = () => {
   return (
-    <div className="grid grid-cols-3 grid-rows-6">
-      <div>Časovni blok</div>
-      <div>Omrežnina za priključno moč (evro/kW)</div>
-      <div>Omrežnina za porabljeno energijo (evro/kWh)</div>
-      <div>1</div>
-      <div>{priceBlok1.prikljucnaMoc}</div>
-      <div>{priceBlok1.porabljenaEnergija}</div>
-      <div>2</div>
-      <div>{priceBlok2.prikljucnaMoc}</div>
-      <div>{priceBlok2.porabljenaEnergija}</div>
-      <div>3</div>
-      <div>{priceBlok3.prikljucnaMoc}</div>
-      <div>{priceBlok3.porabljenaEnergija}</div>
-      <div>4</div>
-      <div>{priceBlok4.prikljucnaMoc}</div>
-      <div>{priceBlok4.porabljenaEnergija}</div>
-      <div>5</div>
-      <div>{priceBlok5.prikljucnaMoc}</div>
-      <div>{priceBlok5.porabljenaEnergija}</div>
+    <div className="mx-auto grid w-full grid-cols-3 grid-rows-6 gap-[2px] [&>*]:rounded-sm">
+      <div className="grid_top_row bg-table-grey-dark !rounded-tl-2xl">
+        Časovni blok
+      </div>
+      <div className="grid_top_row bg-table-grey-dark">
+        Omrežnina za priključno moč (evro/kW)
+      </div>
+      <div className="grid_top_row bg-table-grey-dark !rounded-tr-2xl">
+        Omrežnina za porabljeno energijo (evro/kWh)
+      </div>
+      <div className="grid_inner_item bg-table-red">1</div>
+      <div className="grid_inner_item bg-table-red">
+        {priceBlok1.prikljucnaMoc}
+      </div>
+      <div className="grid_inner_item bg-table-red">
+        {priceBlok1.porabljenaEnergija}
+      </div>
+      <div className="grid_inner_item bg-table-yellow">2</div>
+      <div className="grid_inner_item bg-table-yellow">
+        {priceBlok2.prikljucnaMoc}
+      </div>
+      <div className="grid_inner_item bg-table-yellow">
+        {priceBlok2.porabljenaEnergija}
+      </div>
+      <div className="grid_inner_item bg-table-cream">3</div>
+      <div className="grid_inner_item bg-table-cream">
+        {priceBlok3.prikljucnaMoc}
+      </div>
+      <div className="grid_inner_item bg-table-cream">
+        {priceBlok3.porabljenaEnergija}
+      </div>
+      <div className="grid_inner_item bg-table-greeny">4</div>
+      <div className="grid_inner_item bg-table-greeny">
+        {priceBlok4.prikljucnaMoc}
+      </div>
+      <div className="grid_inner_item bg-table-greeny">
+        {priceBlok4.porabljenaEnergija}
+      </div>
+      <div className="grid_inner_item bg-table-green !rounded-bl-2xl">5</div>
+      <div className="grid_inner_item bg-table-green">
+        {priceBlok5.prikljucnaMoc}
+      </div>
+      <div className="grid_inner_item bg-table-green !rounded-br-2xl">
+        {priceBlok5.porabljenaEnergija}
+      </div>
     </div>
   );
 };

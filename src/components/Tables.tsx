@@ -7,9 +7,13 @@ const Tables = () => {
       <h2 className="text-3xl font-semibold">
         Prikazna tabela za določitev blokov
       </h2>
-      <div>
-        <TableBlok />
-        <TablePrice />
+      <div className="flex flex-col gap-10">
+        <div className="w-full">
+          <TableBlok />
+        </div>
+        <div className="w-1/2">
+          <TablePrice />
+        </div>
       </div>
     </div>
   );
