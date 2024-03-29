@@ -1,8 +1,25 @@
+import { useEffect, useState } from "react";
 import Logo from "../assets/cenergija-logo.svg";
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const checkScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", checkScroll);
+
+    return () => {
+      window.removeEventListener("scroll", checkScroll);
+    };
+  }, []);
+
   return (
-    <div className="navbar fixed left-1/2 top-5 z-50 mx-auto max-w-[1440px] -translate-x-1/2 rounded-2xl bg-light-yellow/70 shadow-md backdrop-blur-md">
+    <div
+      className={`navbar fixed z-50 mx-auto transform transition-all duration-500 ease-in-out ${isScrolled ? "left-1/2 top-5 w-[1200px] -translate-x-1/2 rounded-2xl bg-light-blue/70 shadow-md backdrop-blur-md" : "left-0 top-0 w-full translate-x-0 bg-light-blue"}`}
+    >
       <div className="navbar-start flex gap-3">
         <img src={Logo} alt="Cenergija" className="h-12 w-12" />
         <a className="text-xl font-semibold">CENERGIJA</a>
@@ -12,7 +29,7 @@ const Header = () => {
           <div
             tabIndex={0}
             role="button"
-            className="btn btn-ghost group rounded-xl border-transparent hover:border-transparent hover:bg-primary"
+            className="btn btn-ghost group rounded-xl  border-transparent hover:border-transparent hover:bg-primary"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

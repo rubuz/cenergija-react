@@ -10,7 +10,7 @@ function App() {
       <div className="h-[100dvh] bg-white font-roboto ">
         <Header />
         <Section>
-          <h1 className="my-14 text-center text-5xl font-bold">
+          <h1 className="my-14 mt-20 text-center text-5xl font-bold">
             TRENUNTA CENA ELEKTRIČNE OMREŽNINE
           </h1>
         </Section>
