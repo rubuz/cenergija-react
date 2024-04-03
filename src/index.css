@@ -4,7 +4,7 @@
 
 @layer components {
   .test {
-    @apply text-accent mb-4 font-semibold;
+    @apply mb-4 font-semibold text-accent;
   }
 
   .flex-center {
@@ -19,10 +19,14 @@
   }
 
   .grid_h_item {
-    @apply flex-center bg-table-grey-dark h-full w-full text-center;
+    @apply flex-center h-full w-full bg-table-grey-dark text-center;
   }
 
   .grid_empty_item {
     @apply flex-center h-full w-full bg-slate-100;
   }
+}
+
+html {
+  background-color: white;
 }

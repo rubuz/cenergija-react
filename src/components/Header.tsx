@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <div
-      className={`navbar fixed z-50 mx-auto transform transition-all duration-500 ease-in-out ${isScrolled ? "left-1/2 top-5 w-[1200px] -translate-x-1/2 rounded-2xl bg-light-blue/70 shadow-md backdrop-blur-md" : "left-0 top-0 w-full translate-x-0 bg-light-blue"}`}
+      className={`navbar fixed z-50 mx-auto transform transition-all duration-500 ease-in-out ${isScrolled ? " left-1/2 top-5 w-[1200px] -translate-x-1/2 rounded-2xl bg-light-blue/70 shadow-md backdrop-blur-md" : "left-0 top-0 w-full translate-x-0 bg-light-blue"}`}
     >
       <div className="navbar-start flex gap-3">
         <img src={Logo} alt="Cenergija" className="h-12 w-12" />
@@ -29,7 +29,7 @@ const Header = () => {
           <div
             tabIndex={0}
             role="button"
-            className="btn btn-ghost group rounded-xl  border-transparent hover:border-transparent hover:bg-primary"
+            className="group btn btn-ghost rounded-xl  border-transparent hover:border-transparent hover:bg-primary"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@ const Header = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-lg dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu dropdown-content menu-lg z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
           >
             <li>
               <a>Homepage</a>
