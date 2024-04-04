@@ -18,11 +18,16 @@ const Header = () => {
 
   return (
     <div
-      className={`navbar fixed z-50 mx-auto transform transition-all duration-500 ease-in-out ${isScrolled ? " left-1/2 top-5 w-[1200px] -translate-x-1/2 rounded-2xl bg-light-blue/70 shadow-md backdrop-blur-md" : "left-0 top-0 w-full translate-x-0 bg-light-blue"}`}
+      className={`navbar fixed left-0 top-0 z-50 mx-auto transition-all duration-200 ease-in-out ${isScrolled ? " bg-white/70 shadow-md backdrop-blur-lg" : ""}`}
     >
       <div className="navbar-start flex gap-3">
         <img src={Logo} alt="Cenergija" className="h-12 w-12" />
         <a className="text-xl font-semibold">CENERGIJA</a>
+      </div>
+      <div className="navbar-center">
+        <h1 className="text-center text-5xl font-bold">
+          TRENUNTA CENA ELEKTRIČNE OMREŽNINE
+        </h1>
       </div>
       <div className="navbar-end">
         <div className="dropdown dropdown-end">

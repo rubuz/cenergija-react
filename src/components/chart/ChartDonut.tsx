@@ -74,7 +74,7 @@ const ChartDonut = () => {
 
   return (
     <>
-      <div className="relative mx-auto flex aspect-square h-[700px] items-center justify-center">
+      <div className="relative mx-auto flex aspect-square w-[60%] items-center justify-center">
         <div className="z-20 m-0 aspect-square w-[91%]">
           <Doughnut data={chartData} options={chartOptions} />
         </div>
