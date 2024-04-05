@@ -73,6 +73,12 @@ export const hourAMIndexMapping: number[] = [
 
 // DATA FOR THE DOUGHNUT GRAPH
 
+// const blok1: string = "rgba(246, 62, 2, 1)";
+// const blok2: string = "rgba(255, 196, 68, 1)";
+// const blok3: string = "rgba(240, 213, 160, 1)";
+// const blok4: string = "rgba(201, 218, 133, 1)";
+// const blok5: string = "rgba(118, 192, 69, 1)";
+
 const blok1: string = "rgba(246, 62, 2, 1)";
 const blok2: string = "rgba(255, 196, 68, 1)";
 const blok3: string = "rgba(240, 213, 160, 1)";

@@ -22,10 +22,12 @@ const Header = () => {
     >
       <div className="navbar-start flex gap-3">
         <img src={Logo} alt="Cenergija" className="h-12 w-12" />
-        <a className="text-xl font-semibold">CENERGIJA</a>
+        <a className="text-xl font-semibold">
+          <span className="text-table-red">cEne</span>rgija
+        </a>
       </div>
       <div className="navbar-center">
-        <h1 className="text-center text-5xl font-bold">
+        <h1 className="text-center text-4xl font-bold">
           TRENUNTA CENA ELEKTRIČNE OMREŽNINE
         </h1>
       </div>
@@ -34,7 +36,7 @@ const Header = () => {
           <div
             tabIndex={0}
             role="button"
-            className="group btn btn-ghost rounded-xl  border-transparent hover:border-transparent hover:bg-primary"
+            className="group btn btn-ghost rounded-xl  border-transparent hover:border-transparent hover:bg-table-yellow"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
