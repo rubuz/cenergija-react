@@ -18,7 +18,8 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed left-0 top-0 z-50 w-full transition-all duration-200 ease-in-out ${isScrolled ? " bg-white/70 shadow-md backdrop-blur-lg" : ""}`}
+      // className={`fixed left-0 top-0 z-50 w-full bg-table-yellow/70 transition-all duration-200 ease-in-out ${isScrolled ? " bg-table-yellow/70 shadow-md backdrop-blur-lg" : ""}`}
+      className="fixed left-0 top-0 z-50 w-full"
     >
       <div className={`navbar mx-auto max-w-[1440px]`}>
         <div className="navbar-start flex gap-3">
@@ -29,7 +30,7 @@ const Header = () => {
         </div>
         <div className="navbar-center">
           <h1 className="text-center text-4xl font-bold">
-            TRENUNTA CENA ELEKTRIČNE OMREŽNINE
+            Trenutna cena električne omrežnine
           </h1>
         </div>
         <div className="navbar-end">
@@ -71,6 +72,22 @@ const Header = () => {
           </div>
         </div>
       </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        className="absolute -top-8 left-0 -z-20 w-full"
+      >
+        {/* <path
+          fill="#ffc444"
+          fill-opacity="1"
+          d="M0,128L120,133.3C240,139,480,149,720,149.3C960,149,1200,139,1320,133.3L1440,128L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
+        ></path> */}
+        <path
+          fill="#ffc444"
+          fill-opacity="1"
+          d="M0,96L120,90.7C240,85,480,75,720,80C960,85,1200,107,1320,117.3L1440,128L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
+        ></path>
+      </svg>
     </div>
   );
 };

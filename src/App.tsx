@@ -10,7 +10,7 @@ function App() {
       <div className="h-[100dvh] bg-white font-roboto ">
         <Header />
         <Section>
-          <div className="grid h-[100dvh] items-center">
+          <div className="grid h-[100dvh] max-h-[1200px] items-center">
             <ChartDonut />
           </div>
         </Section>

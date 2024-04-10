@@ -3,10 +3,10 @@ import TablePrice from "./tables/TablePrice";
 
 const Faq = () => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="mb-32 flex flex-col gap-2">
       <div
         tabIndex={0}
-        className="collapse collapse-arrow border border-slate-300 transition-all duration-200 hover:ring-2 hover:ring-slate-400"
+        className="collapse collapse-arrow border border-slate-300 bg-white transition-all duration-200 hover:ring-2 hover:ring-slate-400"
       >
         <div className="collapse-title text-xl font-medium">
           Nov sistem obračunavanja omrežnine
@@ -28,7 +28,7 @@ const Faq = () => {
       </div>
       <div
         tabIndex={1}
-        className="collapse collapse-arrow border border-slate-300 transition-all duration-200 hover:ring-2 hover:ring-slate-400"
+        className="collapse collapse-arrow border border-slate-300 bg-white transition-all duration-200 hover:ring-2 hover:ring-slate-400"
       >
         <div className="collapse-title text-xl font-medium">
           Kako so razvrščeni časovni bloki?
@@ -47,7 +47,7 @@ const Faq = () => {
       </div>
       <div
         tabIndex={2}
-        className="collapse collapse-arrow border border-slate-300 transition-all duration-200 hover:ring-2 hover:ring-slate-400"
+        className="collapse collapse-arrow border border-slate-300 bg-white transition-all duration-200 hover:ring-2 hover:ring-slate-400"
       >
         <div className="collapse-title text-xl font-medium">
           Cenik omrežnine za obračunsko/obračunsko moč po časovnih blokih

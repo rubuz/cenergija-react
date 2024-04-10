@@ -19,6 +19,18 @@ export default {
         "table-cream": "#f0d5a0",
         "table-greeny": "#c9da85",
         "table-grey-dark": "#E5E5DD",
+
+        "table-red-light": "#f63e0280",
+        "table-green-light": "#76c04580",
+        "table-yellow-light": "#ffc44480",
+        "table-cream-light": "#f0d5a080",
+        "table-greeny-light": "#c9da8580",
+
+        "table-red-dark": "#7b1f01",
+        "table-green-dark": "#3b6023",
+        "table-yellow-dark": "#7f6222",
+        "table-cream-dark": "#786b50",
+        "table-greeny-dark": "#646d43",
       },
     },
   },
