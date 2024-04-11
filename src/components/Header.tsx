@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { ColorContext } from "../utils/ColorContext";
 import Logo from "../assets/cenergija-logo.svg";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { dotColor } = useContext(ColorContext);
 
   useEffect(() => {
     const checkScroll = () => {
@@ -24,8 +26,8 @@ const Header = () => {
       <div className={`navbar mx-auto max-w-[1440px]`}>
         <div className="navbar-start flex gap-3">
           <img src={Logo} alt="Cenergija" className="h-12 w-12" />
-          <a className="text-2xl font-semibold">
-            <span className="text-table-red">cEne</span>rgija
+          <a className="text-2xl font-semibold" href="/">
+            <span className="text-blue-500">cEne</span>rgija
           </a>
         </div>
         <div className="navbar-center">
@@ -38,7 +40,7 @@ const Header = () => {
             <div
               tabIndex={0}
               role="button"
-              className="group btn btn-ghost rounded-xl  border-transparent hover:border-transparent hover:bg-table-yellow"
+              className="group btn btn-ghost rounded-xl  border-transparent hover:border-transparent"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +77,7 @@ const Header = () => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
-        className="absolute -top-8 left-0 -z-20 w-full"
+        className="absolute -top-9 left-0 -z-20 w-full min-w-[1920px]"
       >
         {/* <path
           fill="#ffc444"
@@ -83,7 +85,7 @@ const Header = () => {
           d="M0,128L120,133.3C240,139,480,149,720,149.3C960,149,1200,139,1320,133.3L1440,128L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
         ></path> */}
         <path
-          fill="#ffc444"
+          fill={dotColor}
           fill-opacity="1"
           d="M0,96L120,90.7C240,85,480,75,720,80C960,85,1200,107,1320,117.3L1440,128L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
         ></path>
