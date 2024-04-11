@@ -9,16 +9,20 @@ import {
   hourAMIndexMapping,
   hourPMIndexMapping,
 } from "../../data/data";
-import useCurrentTimePeriod from "../../hooks/useCurrentTimePeriod";
+import useCurrentTimePeriod from "../../utils/useCurrentTimePeriod";
 import ClockDot from "./ClockDot";
 import ClockNumbers from "./ClockNumbers";
 import ChartCenter from "./ChartCenter";
 
 import { PriceBlock } from "../../data/data";
 
+import { useContext, useEffect } from "react";
+import { ColorContext } from "../../utils/ColorContext";
+
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const ChartDonut = () => {
+  const { setDotColor } = useContext(ColorContext);
   const { month, dayOfWeek, dayOfMonth, isAM } = useCurrentTimePeriod();
 
   // Format the current date as a string in the format 'YYYY-MM-DD'
@@ -62,6 +66,10 @@ const ChartDonut = () => {
       },
     ],
   };
+
+  useEffect(() => {
+    setDotColor(dotColor);
+  }, [colors, colorIndex, setDotColor]);
 
   const chartOptions = {
     plugins: {

@@ -1,12 +1,24 @@
+import { useContext } from "react";
+import { ColorContext } from "../utils/ColorContext";
 import Logo from "../assets/cenergija-logo.svg";
 
 const Footer = () => {
+  const { dotColor } = useContext(ColorContext);
+
   return (
     <div className="relative w-full bg-transparent">
       <footer className="footer mx-auto max-w-[1440px] items-center p-4 text-black">
         <aside className="grid-flow-col items-center">
           <img src={Logo} alt="Cenergija" className="h-10" />
-          <p>Copyright © 2024 - All right reserved</p>
+          <div className="flex flex-col justify-center">
+            <p>Copyright © 2024 - All right reserved</p>
+            <p>
+              Made by{" "}
+              <a href="https://lovenjak.vercel.app" className="hover__link">
+                Lovenjak
+              </a>
+            </p>
+          </div>
         </aside>
         <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
           <a className="cursor-pointer" href="mailto:rubuz23@gmail.com">
@@ -40,10 +52,10 @@ const Footer = () => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
-        className="absolute bottom-0 -z-10 w-full"
+        className="absolute bottom-0 -z-10 w-full min-w-[1920px]"
       >
         <path
-          fill="#ffc444"
+          fill={dotColor}
           fill-opacity="1"
           d="M0,256L60,245.3C120,235,240,213,360,224C480,235,600,277,720,261.3C840,245,960,171,1080,133.3C1200,96,1320,96,1380,96L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
         ></path>
