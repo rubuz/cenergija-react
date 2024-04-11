@@ -1,12 +1,32 @@
 import TableBlok from "./tables/TableBlok";
 import TablePrice from "./tables/TablePrice";
+import { useLocation } from "react-router-dom";
+import { useEffect, useRef } from "react";
 
 const Faq = () => {
+  const location = useLocation();
+  const openDiv = location.state?.openDiv;
+
+  const div1Ref = useRef(null);
+  const div2Ref = useRef(null);
+  const div3Ref = useRef(null);
+
+  useEffect(() => {
+    if (openDiv === 0) {
+      div1Ref.current.click();
+    } else if (openDiv === 1) {
+      div2Ref.current.click();
+    } else if (openDiv === 2) {
+      div3Ref.current.click();
+    }
+  }, []);
+
   return (
     <div className="mb-32 flex flex-col gap-2">
       <div
+        ref={div1Ref}
         tabIndex={0}
-        className="collapse collapse-arrow border border-slate-300 bg-white/70 backdrop-blur-lg transition-all duration-200 hover:ring-2 hover:ring-slate-400"
+        className="collapse collapse-arrow border border-slate-300 bg-white/70 backdrop-blur-sm transition-all duration-200 hover:ring-2 hover:ring-slate-400"
       >
         <div className="collapse-title text-xl font-medium">
           Nov sistem obračunavanja omrežnine
@@ -27,8 +47,9 @@ const Faq = () => {
         </div>
       </div>
       <div
+        ref={div2Ref}
         tabIndex={1}
-        className="collapse collapse-arrow border border-slate-300 bg-white/70 backdrop-blur-lg transition-all duration-200 hover:ring-2 hover:ring-slate-400"
+        className="collapse collapse-arrow border border-slate-300 bg-white/70 backdrop-blur-sm transition-all duration-200 hover:ring-2 hover:ring-slate-400"
       >
         <div className="collapse-title text-xl font-medium">
           Kako so razvrščeni časovni bloki?
@@ -46,8 +67,9 @@ const Faq = () => {
         </div>
       </div>
       <div
+        ref={div3Ref}
         tabIndex={2}
-        className="collapse collapse-arrow border border-slate-300 bg-white/70 backdrop-blur-lg transition-all duration-200 hover:ring-2 hover:ring-slate-400"
+        className="collapse collapse-arrow border border-slate-300 bg-white/70 backdrop-blur-sm transition-all duration-200 hover:ring-2 hover:ring-slate-400"
       >
         <div className="collapse-title text-xl font-medium">
           Cenik omrežnine za obračunsko/obračunsko moč po časovnih blokih

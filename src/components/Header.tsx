@@ -1,6 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import { ColorContext } from "../utils/ColorContext";
 import Logo from "../assets/cenergija-logo.svg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -62,7 +63,9 @@ const Header = () => {
               className="menu dropdown-content menu-lg z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
             >
               <li>
-                <a>Homepage</a>
+                <Link to="/faq" state={{ openDiv: 1 }}>
+                  Nov sistem
+                </Link>
               </li>
               <li>
                 <a>Portfolio</a>
