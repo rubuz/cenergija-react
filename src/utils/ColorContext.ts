@@ -1,6 +1,10 @@
 import React from "react";
 
-export const ColorContext = React.createContext({
-  dotColor: "black",
-  setDotColor: (dotColor: string) => {},
-});
+type ColorContextType = {
+  dotColor: "black";
+  setDotColor: (dotColor: string) => void;
+};
+
+export const ColorContext = React.createContext<ColorContextType | undefined>(
+  undefined,
+);
