@@ -3,20 +3,20 @@ import { ColorContext } from "../utils/ColorContext";
 import Logo from "../assets/cenergija-logo.svg";
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  // const [isScrolled, setIsScrolled] = useState(false);
   const { dotColor } = useContext(ColorContext);
 
-  useEffect(() => {
-    const checkScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+  // useEffect(() => {
+  //   const checkScroll = () => {
+  //     setIsScrolled(window.scrollY > 50);
+  //   };
 
-    window.addEventListener("scroll", checkScroll);
+  //   window.addEventListener("scroll", checkScroll);
 
-    return () => {
-      window.removeEventListener("scroll", checkScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", checkScroll);
+  //   };
+  // }, []);
 
   return (
     <div
@@ -62,13 +62,13 @@ const Header = () => {
               className="menu dropdown-content menu-lg z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
             >
               <li>
-                <a>Homepage</a>
+                <a href="/">Domov</a>
               </li>
               <li>
-                <a>Portfolio</a>
+                <a href="#faq">Vpršanja</a>
               </li>
               <li>
-                <a>About</a>
+                <a href="mailto:rubuz23@gmail.com">Kontakt</a>
               </li>
             </ul>
           </div>
