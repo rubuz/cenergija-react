@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from "react";
+import { useContext } from "react";
 import { ColorContext } from "../utils/ColorContext";
 import Logo from "../assets/cenergija-logo.svg";
 
