@@ -4,7 +4,7 @@ import Logo from "../assets/cenergija-logo.svg";
 
 const Header = () => {
   // const [isScrolled, setIsScrolled] = useState(false);
-  const { dotColor } = useContext(ColorContext);
+  const { dotColor } = useContext(ColorContext) || {};
 
   // useEffect(() => {
   //   const checkScroll = () => {

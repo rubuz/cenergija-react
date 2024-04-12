@@ -3,7 +3,7 @@ import { ColorContext } from "../utils/ColorContext";
 import Logo from "../assets/cenergija-logo.svg";
 
 const Footer = () => {
-  const { dotColor } = useContext(ColorContext);
+  const { dotColor } = useContext(ColorContext) || {};
 
   return (
     <div className="relative w-full bg-transparent">

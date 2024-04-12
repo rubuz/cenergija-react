@@ -1,7 +1,7 @@
 import React from "react";
 
 type ColorContextType = {
-  dotColor: "black";
+  dotColor: string;
   setDotColor: (dotColor: string) => void;
 };
 
