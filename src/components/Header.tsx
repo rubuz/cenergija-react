@@ -59,15 +59,15 @@ const Header = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu dropdown-content menu-lg z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+              className="menu dropdown-content menu-lg z-[1] mt-3 w-52 rounded-box bg-white p-2 shadow"
             >
-              <li>
+              <li className="transition-all duration-150 hover:translate-x-1">
                 <a href="/">Domov</a>
               </li>
-              <li>
+              <li className="transition-all duration-150 hover:translate-x-1">
                 <a href="#faq">Vpršanja</a>
               </li>
-              <li>
+              <li className="transition-all duration-150 hover:translate-x-1">
                 <a href="mailto:rubuz23@gmail.com">Kontakt</a>
               </li>
             </ul>

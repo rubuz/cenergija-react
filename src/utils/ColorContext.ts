@@ -5,6 +5,4 @@ type ColorContextType = {
   setDotColor: (dotColor: string) => void;
 };
 
-export const ColorContext = React.createContext<ColorContextType | undefined>(
-  undefined,
-);
+export const ColorContext = React.createContext<ColorContextType>();
