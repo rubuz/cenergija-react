@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Section from "./components/Section";
 import ChartDonut from "./components/chart/ChartDonut";
 import { ColorContext } from "./utils/ColorContext";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [dotColor, setDotColor] = useState<string>("");
@@ -23,6 +24,7 @@ function App() {
         </Section>
         <Footer />
       </div>
+      <Analytics />
     </ColorContext.Provider>
   );
 }
