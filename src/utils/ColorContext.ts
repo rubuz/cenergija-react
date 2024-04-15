@@ -5,4 +5,10 @@ type ColorContextType = {
   setDotColor: (dotColor: string) => void;
 };
 
-export const ColorContext = React.createContext<ColorContextType>();
+const defaultColorContext: ColorContextType = {
+  dotColor: "#F0D5A0",
+  setDotColor: () => {},
+};
+
+export const ColorContext =
+  React.createContext<ColorContextType>(defaultColorContext);
