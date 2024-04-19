@@ -12,10 +12,10 @@ function App() {
 
   return (
     <ColorContext.Provider value={{ dotColor, setDotColor }}>
-      <div className="h-[100dvh] bg-white font-roboto ">
+      <div className="relative bg-white font-roboto">
         <Header />
         <Section>
-          <div className="grid h-[100dvh] max-h-[1200px] items-center">
+          <div className="my-40 grid h-full max-h-[1200px] items-center">
             <ChartDonut />
           </div>
         </Section>

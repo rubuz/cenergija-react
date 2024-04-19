@@ -6,10 +6,12 @@ const Footer = () => {
   const { dotColor } = useContext(ColorContext) || {};
 
   return (
-    <div className="relative w-full bg-transparent">
-      <footer className="footer mx-auto max-w-[1440px] items-center p-4 text-black">
-        <aside className="grid-flow-col items-center">
-          <img src={Logo} alt="Cenergija" className="h-10" />
+    <div className="w-full bg-transparent">
+      <footer className="relative z-10 mx-auto flex max-w-[1440px] items-center justify-between p-4 text-black">
+        <aside className="flex items-center justify-center gap-4">
+          <a href="/">
+            <img src={Logo} alt="Cenergija" className="h-10" />
+          </a>
           <div className="flex flex-col justify-center">
             <p>Copyright © 2024 - All right reserved</p>
             <p>
@@ -48,11 +50,11 @@ const Footer = () => {
             </svg>
           </a>
         </nav>
-      </footer>
+      </footer>{" "}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
-        className="absolute bottom-0 -z-10 w-full min-w-[1920px]"
+        className="z-1 absolute bottom-0 right-0"
       >
         <path
           fill={dotColor}

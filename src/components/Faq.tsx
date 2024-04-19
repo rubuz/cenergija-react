@@ -3,7 +3,7 @@ import TablePrice from "./tables/TablePrice";
 
 const Faq = () => {
   return (
-    <div id="faq" className="mb-32 flex flex-col gap-2">
+    <div id="faq" className=" relative z-20 mb-32 flex flex-col gap-2">
       <div
         tabIndex={0}
         className="collapse collapse-arrow border border-slate-300 bg-white/70 backdrop-blur-lg transition-all duration-200 hover:ring-2 hover:ring-slate-400"
