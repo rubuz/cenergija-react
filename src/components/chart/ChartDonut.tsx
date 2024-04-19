@@ -80,7 +80,7 @@ const ChartDonut = () => {
 
   return (
     <>
-      <div className="relative mx-auto flex aspect-square w-full max-w-[60%] items-center justify-center">
+      <div className="relative mx-auto flex aspect-square w-full items-center justify-center lg:max-w-[60%]">
         <div className="z-20 m-0 aspect-square w-[91%]">
           <Doughnut data={chartData} options={chartOptions} />
         </div>

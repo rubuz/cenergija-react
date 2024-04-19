@@ -54,7 +54,7 @@ const Footer = () => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
-        className="z-1 absolute bottom-0 right-0"
+        className="z-1 absolute bottom-0 right-0 min-w-[1440px]"
       >
         <path
           fill={dotColor}
