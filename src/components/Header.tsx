@@ -26,12 +26,12 @@ const Header = () => {
       <div className={`navbar mx-auto max-w-[1440px]`}>
         <div className="navbar-start flex gap-3">
           <img src={Logo} alt="Cenergija" className="h-12 w-12" />
-          <a className="font-semibold xl:text-2xl" href="/">
+          <a className="text-2xl font-semibold" href="/">
             <span className="text-blue-500">cEne</span>rgija
           </a>
         </div>
         <div className="navbar-center">
-          <h1 className="text-center font-bold lg:text-3xl xl:text-4xl">
+          <h1 className="hidden text-center font-bold md:block md:text-2xl lg:text-3xl xl:text-4xl">
             Trenutna cena električne omrežnine
           </h1>
         </div>

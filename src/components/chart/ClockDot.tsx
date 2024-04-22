@@ -30,7 +30,7 @@ const ClockDot = ({ dotColor }: { dotColor: string }) => {
     >
       <div
         style={{ backgroundColor: dotColor }}
-        className="absolute -top-4 left-1/2 aspect-square h-[35px] origin-center -translate-x-1/2 rounded-full"
+        className="absolute -top-2 left-1/2 aspect-square h-[25px] origin-center -translate-x-1/2 rounded-full lg:-top-4 lg:h-[35px]"
       ></div>
     </div>
   );

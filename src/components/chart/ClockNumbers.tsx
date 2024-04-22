@@ -25,7 +25,7 @@ const ClockNumbers = ({ isAM }: { isAM: boolean }) => {
                 transform: `translate(-50%, -50%)`,
               }}
             >
-              <span className="text-3xl font-extrabold text-black">
+              <span className="text-xl font-extrabold text-black md:text-2xl lg:text-3xl">
                 {number}
               </span>
             </label>
