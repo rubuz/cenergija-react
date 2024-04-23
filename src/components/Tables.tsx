@@ -11,7 +11,7 @@ const Tables = () => {
         <div className="w-full">
           <TableBlok />
         </div>
-        <div className="w-1/2">
+        <div className="w-full md:w-1/2">
           <TablePrice />
         </div>
       </div>

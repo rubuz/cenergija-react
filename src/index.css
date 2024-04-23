@@ -12,14 +12,14 @@
   }
 
   .grid_top_row {
-    @apply flex-center h-full w-full self-center text-center text-lg font-semibold capitalize;
+    @apply flex-center h-full w-full self-center text-center font-semibold capitalize md:text-lg;
   }
   .grid_inner_item {
-    @apply flex-center h-full w-full flex-col self-center;
+    @apply flex-center h-full w-full flex-col items-center justify-center self-center max-sm:text-[10px];
   }
 
   .grid_h_item {
-    @apply flex-center h-full w-full bg-table-grey-dark text-center;
+    @apply flex-center h-full w-full bg-table-grey-dark text-center max-sm:text-xs max-sm:[text-orientation:upright] max-sm:[writing-mode:vertical-lr];
   }
 
   .grid_empty_item {

@@ -52,7 +52,7 @@ const Faq = () => {
         <div className="collapse-title text-xl font-medium">
           Cenik omrežnine za obračunsko/obračunsko moč po časovnih blokih
         </div>
-        <div className="collapse-content mx-auto flex w-2/3 flex-col gap-3">
+        <div className="collapse-content mx-auto flex w-full flex-col gap-3 md:w-2/3">
           <TablePrice />
         </div>
       </div>

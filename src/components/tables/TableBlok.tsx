@@ -1,6 +1,6 @@
 const TableBlok = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-4">
       <div className="grid grid-cols-[repeat(2,10%)_repeat(5,_1fr)] grid-rows-[20%_repeat(2,minmax(80px,_1fr))] gap-[2px] [&>*]:rounded-sm">
         <div className="grid_top_row col-span-2 !rounded-tl-2xl bg-table-grey-dark">
           obdobje
@@ -12,7 +12,7 @@ const TableBlok = () => {
         <div className="grid_top_row !rounded-tr-2xl bg-table-green">
           blok 5
         </div>
-        <div className="grid_h_item row-span-2 text-3xl font-bold">
+        <div className="grid_h_item row-span-2 text-xs font-bold md:text-3xl">
           Višja sezona
         </div>
         <div className="grid_h_item">Delovni dan</div>
@@ -49,8 +49,8 @@ const TableBlok = () => {
         <div className="grid_inner_item grid_empty_item"></div>
       </div>
 
-      <div className="mt-5 grid grid-cols-[repeat(2,10%)_repeat(5,1fr)] grid-rows-[repeat(2,minmax(80px,_1fr))] gap-[2px] [&>*]:rounded-md">
-        <div className="grid_h_item row-span-2 !rounded-bl-2xl text-3xl font-bold">
+      <div className=" grid grid-cols-[repeat(2,10%)_repeat(5,1fr)] grid-rows-[repeat(2,minmax(80px,_1fr))] gap-[2px] [&>*]:rounded-md">
+        <div className="grid_h_item row-span-2 !rounded-bl-2xl text-xs  font-bold md:text-3xl">
           Nižja sezona
         </div>
         <div className="grid_h_item">Delovni dan</div>
@@ -86,7 +86,7 @@ const TableBlok = () => {
           <p>22:00 - 24:00</p>
         </div>
       </div>
-      <div className="mt-5">
+      <div className="mt-1">
         <div className="flex gap-2">
           <p className="font-semibold">Višja sezona:</p>{" "}
           <span>november, december, januar, februar</span>

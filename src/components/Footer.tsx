@@ -12,7 +12,7 @@ const Footer = () => {
           <a href="/">
             <img src={Logo} alt="Cenergija" className="h-10" />
           </a>
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center text-sm">
             <p>Copyright © 2024 - All right reserved</p>
             <p>
               Made by{" "}
