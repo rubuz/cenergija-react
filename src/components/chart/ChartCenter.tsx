@@ -54,7 +54,7 @@ const ChartCenter = ({
       </p>
       <div className="flex flex-col gap-4">
         <div className="text-center">
-          <p className="mx-auto w-[60%] font-semibold text-slate-500 max-sm:text-sm lg:w-[70%]">
+          <p className="mx-auto w-[60%] text-lg font-semibold text-slate-600 max-sm:text-sm lg:w-[70%]">
             Omrežnina za priključno moč v €/kW
           </p>
           <p
@@ -65,7 +65,7 @@ const ChartCenter = ({
           </p>
         </div>
         <div className="text-center">
-          <p className="mx-auto w-[60%] font-semibold text-slate-500 max-sm:text-sm lg:w-[70%]">
+          <p className="mx-auto w-[60%] text-lg font-semibold text-slate-600 max-sm:text-sm lg:w-[70%]">
             Omrežnina za porabljeno energijo v €/kWh
           </p>
           <p
