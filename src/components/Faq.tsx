@@ -13,7 +13,7 @@ const Faq = () => {
         </div>
         <div className="collapse-content">
           <p className="text-justify">
-            S 1. julijem 2024 je začel veljati nov sistem obračunavanja
+            S 1. oktobrom 2024 je začel veljati nov sistem obračunavanja
             omrežnine, ki je tako kot prej, razdeljen na dva dela, na obračunsko
             moč in porabljeno energijo. Prejšne tarife (ET, VT in MT) je
             zamenjal zapleten sistem obračunavanja s petimi časovnimi bloki, ki
