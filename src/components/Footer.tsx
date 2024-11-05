@@ -34,11 +34,11 @@ const Footer = () => {
               viewBox="0 0 75.294 75.294"
               className="transition-all duration-200 ease-in-out hover:scale-110"
             >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
               <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               ></g>
               <g id="SVGRepo_iconCarrier">
                 {" "}
@@ -58,7 +58,7 @@ const Footer = () => {
       >
         <path
           fill={dotColor}
-          fill-opacity="1"
+          fillOpacity="1"
           d="M0,256L60,245.3C120,235,240,213,360,224C480,235,600,277,720,261.3C840,245,960,171,1080,133.3C1200,96,1320,96,1380,96L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
         ></path>
       </svg>

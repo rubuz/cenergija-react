@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { PriceBlock } from "../../data/data";
+import { useMediaQuery } from "react-responsive";
 
 // Custom hook for getting current time
 const useCurrentTime = () => {
@@ -43,9 +44,10 @@ const ChartCenter = ({
   isWorkDay: boolean;
   textColor: string;
 }) => {
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
   const currentTime = useCurrentTime();
   const month = new Date().toLocaleString("sl-SI", { month: "long" });
-  const monthShort = new Date().toLocaleString("sl-SI", { month: "short" });
   const dayOfWeek = new Date().toLocaleString("sl-SI", { weekday: "short" });
 
   return (
@@ -77,16 +79,27 @@ const ChartCenter = ({
           </p>
         </div>
       </div>
-
-      <div className="absolute right-[22%] flex flex-col items-center divide-y-2 divide-slate-400 max-sm:text-xs ">
-        <p className="w-full text-center capitalize">{month}</p>
-        <p
-          className={`w-full text-center text-lg font-bold lg:text-2xl ${isWorkDay ? "" : "text-red-600"}`}
-        >
-          {day}
-        </p>
-        <p className="w-full text-center capitalize">{dayOfWeek}</p>
-      </div>
+      {isMobile ? (
+        <div className="absolute bottom-[22%] flex w-28 flex-row items-center justify-center gap-4 divide-slate-400 max-sm:text-xs ">
+          <p className="w-full text-center capitalize">{dayOfWeek}</p>
+          <p
+            className={`w-full text-center text-lg font-bold lg:text-2xl ${isWorkDay ? "" : "text-red-600"}`}
+          >
+            {day}.
+          </p>
+          <p className="w-full text-center capitalize">{month}</p>
+        </div>
+      ) : (
+        <div className="absolute right-[22%] flex flex-col items-center divide-y-2 divide-slate-400 max-sm:text-xs ">
+          <p className="w-full text-center capitalize">{month}</p>
+          <p
+            className={`w-full text-center text-lg font-bold lg:text-2xl ${isWorkDay ? "" : "text-red-600"}`}
+          >
+            {day}
+          </p>
+          <p className="w-full text-center capitalize">{dayOfWeek}</p>
+        </div>
+      )}
     </div>
   );
 };

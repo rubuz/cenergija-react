@@ -88,7 +88,7 @@ const TableBlok = () => {
       </div>
       <div className="mt-1">
         <div className="flex gap-2">
-          <p className="font-semibold">Višja sezona:</p>{" "}
+          <p className="font-semibold">Višja sezona:</p>
           <span>november, december, januar, februar</span>
         </div>
         <div className="flex gap-2">

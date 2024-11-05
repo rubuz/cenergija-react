@@ -17,6 +17,9 @@
   .grid_inner_item {
     @apply flex-center h-full w-full flex-col items-center justify-center self-center max-sm:text-[10px];
   }
+  .grid_inner_item_price {
+    @apply flex-center h-full w-full flex-col items-center justify-center self-center max-sm:text-[1rem];
+  }
 
   .grid_h_item {
     @apply flex-center h-full w-full bg-table-grey-dark text-center max-sm:text-xs max-sm:[text-orientation:upright] max-sm:[writing-mode:vertical-lr];
