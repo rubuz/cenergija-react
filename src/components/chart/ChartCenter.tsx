@@ -45,16 +45,17 @@ const ChartCenter = ({
 }) => {
   const currentTime = useCurrentTime();
   const month = new Date().toLocaleString("sl-SI", { month: "long" });
+  const monthShort = new Date().toLocaleString("sl-SI", { month: "short" });
   const dayOfWeek = new Date().toLocaleString("sl-SI", { weekday: "short" });
 
   return (
     <div className="flex aspect-square h-full items-center justify-center">
-      <p className="absolute top-[20%] text-2xl font-semibold text-slate-700 lg:top-[25%] lg:text-3xl">
+      <p className="absolute top-[20%] font-semibold text-slate-700 md:text-2xl lg:top-[25%] lg:text-3xl">
         {currentTime}
       </p>
       <div className="flex flex-col gap-4">
         <div className="text-center">
-          <p className="mx-auto w-[60%] text-lg font-semibold text-slate-600 max-sm:text-sm lg:w-[70%]">
+          <p className="mx-auto w-[60%] font-semibold text-slate-600 max-sm:text-sm md:text-lg lg:w-[70%]">
             Omrežnina za priključno moč v €/kW
           </p>
           <p

@@ -9,7 +9,7 @@ const ClockNumbers = ({ isAM }: { isAM: boolean }) => {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="relative flex  aspect-square w-full justify-center rounded-full bg-transparent">
+      <div className="relative flex aspect-square w-full justify-center rounded-full bg-transparent">
         {numbers.map((number) => {
           const angle = (number / 12) * 2 * Math.PI;
           const x = 50 + radius * Math.cos(angle - Math.PI / 2);
@@ -25,7 +25,7 @@ const ClockNumbers = ({ isAM }: { isAM: boolean }) => {
                 transform: `translate(-50%, -50%)`,
               }}
             >
-              <span className="text-xl font-extrabold text-black md:text-2xl lg:text-3xl">
+              <span className="text-lg font-extrabold text-black md:text-2xl lg:text-3xl">
                 {number}
               </span>
             </label>
