@@ -49,17 +49,19 @@ export const priceBlok5: PriceBlock = {
 export const highSeasonMonths: number[] = [10, 11, 0, 1]; // Months in JavaScript are 0-indexed
 export const workFreeDays: number[] = [6, 0]; // 6 is Saturday, 0 is Sunday
 export const workFreeHolidays: string[] = [
-  "2024-01-01",
-  "2024-01-02",
-  "2024-02-08",
-  "2024-04-01",
-  "2024-05-01",
-  "2024-06-25",
-  "2024-08-15",
-  "2024-10-31",
-  "2024-11-01",
-  "2024-12-25",
-  "2024-12-26",
+  "2025-01-01",
+  "2025-01-02",
+  "2025-02-08",
+  "2025-04-21",
+  "2025-04-27",
+  "2025-05-01",
+  "2025-05-02",
+  "2025-06-25",
+  "2025-08-15",
+  "2025-10-31",
+  "2025-11-01",
+  "2025-12-25",
+  "2025-12-26",
 ];
 
 // DOT COLORS INDEX
